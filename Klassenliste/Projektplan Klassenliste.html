@@ -1,0 +1,375 @@
+<!DOCTYPE html>  
+<html lang="de">  
+<head>  
+  <meta charset="UTF-8">  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+  <title>Klassenliste 7740</title>  
+  <style>  
+  body {  
+  font-family: Arial, sans-serif;  
+  background-color: #554393;  
+  color: #7d27a5;  
+  display: flex;  
+  justify-content: center;  
+  align-items: center;  
+  flex-direction: column;  
+  height: 100vh;  
+  margin: 0;  
+}  
+  
+h1 {  
+  font-size: 2.5rem;  
+  color: #842525;  
+  margin-bottom: 20px;  
+}  
+  
+#searchInput {  
+  width: 60%;  
+  padding: 12px;  
+  font-size: 1rem;  
+  margin-bottom: 20px;  
+  border: 1px solid #434776;  
+  border-radius: 5px;  
+}  
+{}
+#sortByName, #sortByVorname {  
+  margin-bottom: 20px;  
+  padding: 10px;  
+  border: none;  
+  border-radius: 5px;  
+  background-color: #4cafaa;  
+  color: rgb(182, 206, 28);  
+  cursor: pointer;  
+}  
+  
+#sortByName:hover, #sortByVorname:hover {  
+  background-color: #0f1341;  
+}  
+  
+table {  
+  width: 60%;  
+  border-collapse: collapse;  
+  margin-top: 20px;  
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);  
+  background-color: #220f60;  
+  border-radius: 8px;  
+  overflow: hidden;  
+}  
+  
+table, th, td {  
+  border: 1px solid #592d9f;  
+}  
+  
+th, td {  
+  padding: 14px;  
+  text-align: left;  
+  font-size: 1rem;  
+}  
+  
+th {  
+  background-color: #af4c60;  
+  color: rgb(176, 196, 26);  
+  font-weight: bold;  
+}  
+  
+td {  
+  background-color: #40d3b1;  
+}  
+  
+tr:nth-child(even) td {  
+  background-color: #68e030;  
+}  
+  
+tr:hover td {  
+  background-color: #2de3fb;  
+}  
+  
+/* Für mobile Geräte */  
+@media (max-width: 768px) {  
+  table {  
+   width: 90%;  
+  }  
+  
+  th, td {  
+   padding: 10px;  
+   font-size: 0.9rem;  
+  }  
+  
+  h1 {  
+   font-size: 2rem;  
+  }  
+  
+  #searchInput {  
+   width: 90%;  
+  }  
+  
+  #sortByName, #sortByVorname {  
+   margin-bottom: 10px;  
+   padding: 8px;  
+  }  
+}
+
+
+ 
+  </style>  
+</head>  
+<body>  
+  <h1>Klassenliste 7740</h1>  
+  <input type="text" id="searchInput" onkeyup="searchTable()" placeholder="Namen suchen...">  
+  <button id="sortByName">Sort by Name</button>  
+  <button id="sortByVorname">Sort by Vorname</button>  
+  <table id="studentTable">  
+   <thead>  
+    <tr>  
+      <th>Name</th>  
+      <th>Vorname</th>  
+      <th>Löschen</th>  
+    </tr>  
+   </thead>  
+   <tbody>  
+        <tr>  
+             <td>Abou Jdaie</td>  
+             <td>Mohamad Yassin</td>  
+             <td><button class="delete-button">Löschen</button></td>  
+           </tr>  
+           <tr>  
+             <td>Agdas</td>  
+             <td>Deven</td>  
+             <td><button class="delete-button">Löschen</button></td>  
+           </tr>  
+           <tr>  
+             <td>Ali</td>  
+             <td>Syed Toussef</td>  
+             <td><button class="delete-button">Löschen</button></td>  
+           </tr>  
+           <tr>  
+             <td>Antonio</td>  
+             <td>Joel Beni</td>  
+             <td><button class="delete-button">Löschen</button></td>  
+           </tr>  
+           <tr>  
+             <td>Becker</td>  
+             <td>Michael</td>  
+             <td><button class="delete-button">Löschen</button></td>  
+           </tr>  
+           <tr>  
+             <td>Bozic</td>  
+             <td>Josip</td>  
+             <td><button class="delete-button">Löschen</button></td>  
+           </tr>  
+           <tr>  
+             <td>Brankovic</td>  
+             <td>Boris</td>  
+             <td><button class="delete-button">Löschen</button></td>  
+           </tr>  
+           <tr>  
+             <td>Brunicky</td>  
+             <td>Felix</td>  
+             <td><button class="delete-button">Löschen</button></td>  
+           </tr>  
+           <tr>  
+             <td>Dehoff</td>  
+             <td>Andras</td>  
+             <td><button class="delete-button">Löschen</button></td>  
+           </tr>  
+           <tr>  
+             <td>Dracker</td>  
+             <td>Erik</td>  
+             <td><button class="delete-button">Löschen</button></td>  
+           </tr>  
+           <tr>  
+             <td>Duvnjak</td>  
+             <td>Mateo</td>  
+             <td><button class="delete-button">Löschen</button></td>  
+           </tr>  
+           <tr>  
+             <td>Hussain</td>  
+             <td>Dilawar</td>  
+             <td><button class="delete-button">Löschen</button></td>  
+           </tr>  
+           <tr>  
+             <td>Jarmuszsak</td>  
+             <td>Edward</td>  
+             <td><button class="delete-button">Löschen</button></td>  
+           </tr>  
+           <tr>  
+             <td>Karpuz</td>  
+             <td>Harun Kaan</td>  
+             <td><button class="delete-button">Löschen</button></td>  
+           </tr>  
+           <tr>  
+             <td>Lehmann</td>  
+             <td>Rebecca</td>  
+             <td><button class="delete-button">Löschen</button></td>  
+           </tr>  
+           <tr>  
+             <td>Miulovic</td>  
+             <td>David</td>  
+             <td><button class="delete-button">Löschen</button></td>  
+           </tr>  
+           <tr>  
+             <td>Picard</td>  
+             <td>Cedrik</td>  
+             <td><button class="delete-button">Löschen</button></td>  
+           </tr>  
+           <tr>  
+             <td>Plana</td>  
+             <td>Blend</td>  
+             <td><button class="delete-button">Löschen</button></td>  
+           </tr>  
+           <tr>  
+             <td>Sawari</td>  
+             <td>Ashgan</td>  
+             <td><button class="delete-button">Löschen</button></td>  
+           </tr>  
+           <tr>  
+             <td>Schneider</td>  
+             <td>Maximilian</td>  
+             <td><button class="delete-button">Löschen</button></td>  
+           </tr>  
+           <tr>  
+             <td>Thieme</td>  
+             <td>Sandro</td>  
+             <td><button class="delete-button">Löschen</button></td>  
+           </tr>  
+           <tr>  
+             <td>Ycay</td>  
+             <td>Angelo</td>  
+             <td><button class="delete-button">Löschen</button></td>  
+           </tr>  
+          </tbody>  
+         </table>  
+   </tbody>  
+  </table>  
+ 
+ 
+ 
+ 
+ <script>
+  // Get the table and the search input  
+const table = document.getElementById('studentTable');  
+const searchInput = document.getElementById('searchInput');  
+  
+// Add event listener to the search input  
+searchInput.addEventListener('input', searchTable);  
+  
+// Function to search the table  
+function searchTable() {  
+  const filter = searchInput.value.toLowerCase();  
+  const tr = table.getElementsByTagName('tr');  
+  
+  for (let i = 1; i < tr.length; i++) {  
+   const tdName = tr[i].getElementsByTagName('td')[0];  
+   const tdVorname = tr[i].getElementsByTagName('td')[1];  
+   if (tdName || tdVorname) {  
+    const txtValueName = tdName.textContent || tdName.innerText;  
+    const txtValueVorname = tdVorname.textContent || tdVorname.innerText;  
+    if (txtValueName.toLowerCase().indexOf(filter) > -1 || txtValueVorname.toLowerCase().indexOf(filter) > -1) {  
+      tr[i].style.display = '';  
+    } else {  
+      tr[i].style.display = 'none';  
+    }  
+   }  
+  }  
+}  
+  
+// Function to sort the table by name  
+function sortTableByName() {  
+  const tr = table.getElementsByTagName('tr');  
+  Array.prototype.slice.call(tr).sort(function(a, b) {  
+   const aName = a.getElementsByTagName('td')[0].textContent || a.getElementsByTagName('td')[0].innerText;  
+   const bName = b.getElementsByTagName('td')[0].textContent || b.getElementsByTagName('td')[0].innerText;  
+   return aName.localeCompare(bName);  
+  }).forEach(function(tr) {  
+   table.appendChild(tr);  
+  });  
+}  
+  
+// Function to sort the table by vorname  
+function sortTableByVorname() {  
+  const tr = table.getElementsByTagName('tr');  
+  Array.prototype.slice.call(tr).sort(function(a, b) {  
+   const aVorname = a.getElementsByTagName('td')[1].textContent || a.getElementsByTagName('td')[1].innerText;  
+   const bVorname = b.getElementsByTagName('td')[1].textContent || b.getElementsByTagName('td')[1].innerText;  
+   return aVorname.localeCompare(bVorname);  
+  }).forEach(function(tr) {  
+   table.appendChild(tr);  
+  });  
+}  
+  
+// Add event listeners to the sort buttons  
+document.getElementById('sortByName').addEventListener('click', sortTableByName);  
+document.getElementById('sortByVorname').addEventListener('click', sortTableByVorname);  
+  
+// Function to add a new row  
+function addRow() {  
+  // Get the input fields for name and vorname  
+  const nameInput = document.getElementById('nameInput');  
+  const vornameInput = document.getElementById('vornameInput');  
+  
+  // Get the values from the input fields  
+  const name = nameInput.value;  
+  const vorname = vornameInput.value;  
+  
+  // Create a new table row  
+  const row = table.insertRow(-1);  
+  
+  // Create cells for the new row  
+  const nameCell = row.insertCell(0);  
+  const vornameCell = row.insertCell(1);  
+  const statusCell = row.insertCell(2);  
+  const deleteCell = row.insertCell(3);  
+  
+  // Add the values to the cells  
+  nameCell.innerHTML = name;  
+  vornameCell.innerHTML = vorname;  
+  statusCell.innerHTML = '<button class="status-button">Anwesend</button>';  
+  deleteCell.innerHTML = '<button class="delete-button">Löschen</button>';  
+  
+  // Add event listener to the new delete button  
+  deleteCell.querySelector('.delete-button').addEventListener('click', deleteRow);  
+  
+  // Add event listener to the status button  
+  statusCell.querySelector('.status-button').addEventListener('click', toggleStatus);  
+  
+  // Clear the input fields  
+  nameInput.value = '';  
+  vornameInput.value = '';  
+}  
+  
+// Function to delete a row  
+function deleteRow(event) {  
+  // Get the row that contains the delete button  
+  const row = event.target.parentNode.parentNode;  
+  
+  // Remove the row from the table  
+  table.deleteRow(row.rowIndex);  
+}  
+  
+// Function to toggle the status of a student  
+function toggleStatus(event) {  
+  // Get the status button  
+  const statusButton = event.target;  
+  
+  // Toggle the status  
+  if (statusButton.textContent === 'Anwesend') {  
+   statusButton.textContent = 'Abwesend';  
+  } else {  
+   statusButton.textContent = 'Anwesend';  
+  }  
+}  
+  
+// Add event listener to the table to catch delete button clicks  
+table.addEventListener('click', function(event) {  
+  if (event.target.classList.contains('delete-button')) {  
+   deleteRow(event);  
+  } else if (event.target.classList.contains('status-button')) {  
+   toggleStatus(event);  
+  }  
+});
+
+</script>  
+</body>  
+</html>
+
+
